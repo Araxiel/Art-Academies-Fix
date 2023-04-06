@@ -1,6 +1,6 @@
 ﻿fine_art = {
 	texture = "gfx/interface/icons/goods_icons/fine_art.dds"
-	cost = 100
+	cost = 200
 	category = luxury
 	
 	obsession_chance = 1.0
