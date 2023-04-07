@@ -3,8 +3,16 @@
 	
 	building_modifiers = {
 		workforce_scaled = {
-			building_input_paper_add = 2.5 # 75
-			building_output_fine_art_add = 1 # 200 - profit of 125
+			building_input_paper_add = 8
+			building_input_dye_add = 3
+			building_input_fabric_add = 6
+			building_input_tools_add = 4
+
+			building_output_fine_art_add = 4
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 500
 		}
 	}
 }
@@ -19,9 +27,17 @@ pm_realist_art = {
 	building_modifiers = {		
 	
 		workforce_scaled = {
-			building_input_paper_add = 5 # 150
-			building_output_fine_art_add = 1.5 # 300 - profit of 150
-		}				
+			building_input_paper_add = 16
+			building_input_dye_add = 5
+			building_input_fabric_add = 6
+			building_input_tools_add = 5
+
+			building_output_fine_art_add = 6
+		}
+		
+		level_scaled = {
+			building_employment_clerks_add = 500
+		}
 	}
 }
 
@@ -35,11 +51,18 @@ pm_photographic_art = {
 	building_modifiers = {		
 	
 		workforce_scaled = {
-			building_input_paper_add = 5 # 150
-			building_input_tools_add = 2 # 80
+			building_input_paper_add = 16
+			building_input_dye_add = 7
+			building_input_tools_add = 10
+			building_input_sulfur_add = 4
 
-			building_output_fine_art_add = 2 # 400 - profit of 170
-		}					
+			building_output_fine_art_add = 8
+		}
+		
+		level_scaled = {
+			building_employment_clerks_add = 250
+			building_employment_machinists_add = 250
+		}
 	}
 }
 
@@ -53,11 +76,89 @@ pm_film_art = {
 	building_modifiers = {		
 	
 		workforce_scaled = {
-			building_input_tools_add = 5 # 150
-			building_input_paper_add = 5 # 200
-			building_input_electricity_add = 2 # 60
-			
-			building_output_fine_art_add = 3 # 600 - profit of 190
-		}					
+			building_input_paper_add = 16
+			building_input_dye_add = 8
+			building_input_tools_add = 15
+			building_input_sulfur_add = 3
+			building_input_electricity_add = 15
+
+			building_output_fine_art_add = 12
+		}
+		
+		level_scaled = {
+			building_employment_clerks_add = 200
+			building_employment_machinists_add = 250
+			building_employment_engineers_add = 150
+		}
 	}
 }	
+
+pm_traditional_patronage = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_aristocrats_add = 150
+			building_employment_academics_add = 850
+		}		
+
+		unscaled = {
+			building_aristocrats_shares_add = 10
+			building_academics_shares_add = 2
+		}
+	}
+}
+
+pm_bourgeoisie_patronage = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_capitalists_add = 100
+			building_employment_aristocrats_add = 50
+			building_employment_academics_add = 850
+		}		
+
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_academics_shares_add = 2
+		}
+	}
+}
+
+pm_independent_artists = {
+	texture = "gfx/interface/icons/production_method_icons/independent_artists.dds"
+
+	unlocking_technologies = {
+		realism
+	}
+
+	building_modifiers = {		
+		level_scaled = {
+			building_employment_academics_add = 900
+			building_employment_clerks_add = 100
+		}		
+
+		unscaled = {
+			building_academics_shares_add = 10
+			building_clerks_shares_add = 2
+			building_machinists_shares_add = 2
+			building_engineers_shares_add = 5
+		}
+	}
+}
